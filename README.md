@@ -93,6 +93,11 @@ git clone https://github.com/UFund-Me/Qbot --depth 1
 
 cd Qbot
 
+# 创建并激活conda环境
+conda create -n qbot python=3.8 -y
+conda activate qbot
+
+# 安装依赖包
 pip install -r dev/requirements.txt
 
 export PYTHONPATH=${PYTHONPATH}:$(pwd):$(pwd)/backend/multi-fact/mfm_learner
@@ -719,7 +724,7 @@ A股回测 KDJ+MACD 策略:
 
 <img width="" alt="dagster" src="https://user-images.githubusercontent.com/29084184/221900050-2275a6e2-5c9b-4b81-84e5-0087e8fb58ec.png">
 
-体验下来，dagster是很适合金融数据采集、处理，还有机器学习的场景。当然这里的场景更偏向于“批处理”，“定时任务”的处理与编排。
+体验下来，dagster是很适合金融数据采集、处理，还有机器学习的场景。当然这里的场景更偏向于"批处理"，"定时任务"的处理与编排。
 
 ```
 cd plugins/dagster
